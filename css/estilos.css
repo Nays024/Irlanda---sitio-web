@@ -1,0 +1,753 @@
+/*ESTILOS GENERALES - Sitio Irlanda Tradición Celta
+ Optimizado para accesibilidad, rendimiento y diseño adaptable. */
+
+/* ==== Variables de color ==== */
+
+:root {
+  --verde: #2e7d32;
+  --naranja: #e65100;
+  --blanco: #ffffff;
+  --gris-claro: #f9f9f9;
+  --gris-oscuro: #333333;
+}
+
+/* Reset general*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--blanco);
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+}
+
+/*Header general*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--blanco);
+  padding: 1rem 2rem;
+  border-bottom: 3px solid var(--verde);
+  position: relative;
+  z-index: 1000;
+}
+
+/*Buscador*/
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.buscador input {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--verde);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.buscador button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--naranja);
+  color: var(--blanco);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.buscador button:hover {
+  background-color: var(--verde);
+}
+
+/*Navegación*/
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav a {
+  text-decoration: none;
+  color: var(--naranja);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover,
+nav a.active {
+  color: var(--verde);
+}
+
+/*Submenús*/
+
+.categorias,
+.idioma {
+  position: relative;
+}
+.categorias .submenu,
+.idioma .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--blanco);
+  border: 2px solid var(--verde);
+  border-radius: 6px;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  min-width: 200px;
+  z-index: 2000;
+}
+.categorias:hover .submenu,
+.idioma:hover .submenu {
+  display: block;
+}
+.submenu li {
+  margin: 0.5rem 0;
+}
+.submenu a {
+  color: var(--naranja);
+  font-weight: normal;
+}
+.submenu a:hover {
+  color: var(--verde);
+}
+
+/*Logo*/
+
+.logo img {
+  max-height: 70px;
+  width: auto;
+}
+
+/*Títulos*/
+
+.titulo {
+  text-align: center;
+  margin: 2rem 0;
+}
+.titulo h1 {
+  font-size: 2rem;
+  color: var(--verde);
+  border: 3px solid var(--naranja);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.titulo h1 {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomTitulo 0.9s ease-out forwards;
+}
+
+@keyframes zoomTitulo {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/*Banner*/
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top: 3px solid var(--verde);
+  border-bottom: 3px solid var(--verde);
+  object-fit: cover;
+}
+
+/*Idiomas (muestra español por defecto= */
+.en {
+  display: none;
+}
+#en:target ~ body .en {
+  display: inline;
+}
+#en:target ~ body .es {
+  display: none;
+}
+
+/*MÚSICA Y DANZA */
+
+.ciudad-buscador {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.icono-menu {
+  width: 70px;
+  height: 70px;
+}
+
+/* Player y logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.player iframe {
+  width: 240px;
+  height: 120px;
+  border: 2px solid var(--verde);
+  border-radius: 6px;
+}
+
+/*Sección Música y Danza */
+.musica-danza {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+/*Bloques generales */
+.bloque {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1.5rem;
+  border: 2px solid var(--verde);
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: var(--gris-claro);
+}
+.bloque .imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+.bloque .texto h2 {
+  color: var(--naranja);
+  margin-bottom: 0.5rem;
+}
+
+/* Video*/
+.video {
+  text-align: center;
+  margin: 3rem 0;
+}
+.video iframe {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--verde);
+}
+
+/*Referencias */
+.referencias {
+  margin-top: 3rem;
+  border-top: 2px solid var(--verde);
+  padding-top: 1rem;
+}
+.referencias h2 {
+  color: var(--naranja);
+  margin-bottom: 1rem;
+}
+.referencias ul {
+  padding-left: 1.5rem;
+}
+
+/*PAISAJES */
+
+.paisajes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+.paisajes img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/*REGISTRO */
+
+.formulario-contenedor {
+  width: 100%;
+  max-width: 420px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.formulario-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.formulario-header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--verde);
+}
+.icono {
+  width: 40px;
+  height: 40px;
+}
+.decoracion {
+  border: none;
+  border-top: 2px solid var(--verde);
+  margin: 1rem auto 2rem;
+  width: 80%;
+}
+
+/*Campos*/
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+}
+input {
+  padding: 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/*Botón */
+button {
+  margin-top: 1rem;
+  background-color: var(--naranja);
+  color: var(--blanco);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: var(--verde);
+}
+
+/* Redes sociales*/
+.redes {
+  margin: 1.5rem 0;
+}
+.redes a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--gris-oscuro);
+  transition: color 0.3s;
+}
+.redes a:hover {
+  color: var(--verde);
+}
+
+/* Enlace login*/
+.login {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.login a {
+  text-decoration: none;
+  color: var(--verde);
+  font-weight: bold;
+}
+
+/*DISEÑO ADAPTABLE */
+@media (max-width: 900px) {
+
+  /* ESTRUCTURA GENERAL */
+  body {
+    font-size: 0.95rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blanco);
+    border-bottom: 3px solid var(--verde);
+    padding: 1rem 0.5rem;
+    width: 100%;
+  }
+
+  /* BUSCADOR */
+  .buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    width: 90%;
+    margin-bottom: 0.6rem;
+  }
+
+  .buscador input {
+    width: 70%;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border: 2px solid var(--verde);
+    border-radius: 6px;
+  }
+
+  .buscador button {
+    padding: 0.5rem 0.8rem;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* NAVEGACIÓN */
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 1rem;
+    color: var(--naranja);
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: var(--verde);
+  }
+
+  /* LOGO Y VIDEO */
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .logo img {
+    width: 80px;
+    height: auto;
+  }
+
+  .player iframe {
+    width: 90%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+  }
+
+  /* TITULOS */
+  .titulo h1 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    padding: 0.8rem;
+    border: 2px solid var(--verde);
+    border-radius: 10px;
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  /* BLOQUES DE CONTENIDO */
+  .bloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background-color: var(--gris-claro);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 90%;
+  }
+
+  .bloque .imagen img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .bloque .texto {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .bloque .texto h2 {
+    font-size: 1.1rem;
+    color: var(--naranja);
+  }
+
+  /* VIDEO */
+  .video iframe {
+    width: 90%;
+    height: 220px;
+    border: 2px solid var(--verde);
+    border-radius: 8px;
+  }
+
+  /* FORMULARIO REGISTRO */
+  .formulario-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gris-claro);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .formulario-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .formulario input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .formulario button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  /* PIE DE PÁGINA */
+  footer {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 1rem;
+    background-color: var(--blanco);
+    border-top: 2px solid var(--verde);
+  }
+}
+
+/* SALUDO ANIMADO */
+#saludo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #2e7d32;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  z-index: 9999;
+  animation: saludo-in 1s ease forwards;
+}
+@keyframes saludo-in {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/*ANIMACIÓN SCROLL REVEAL */
+.bloque, .video, .paisajes article {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* EFECTO HOVER (FLOAT) */
+.bloque:hover,
+.paisajes article:hover {
+  box-shadow: 0 6px 22px rgba(0, 128, 0, 0.35);
+  transform: scale(1.02);
+}
+
+/*  HADA FLOTANTE */
+#hada-flotante {
+  position: fixed;
+  width: 70px;
+  height: auto;
+  pointer-events: none;
+  transition: transform 0.15s linear;
+  z-index: 9000;
+  filter: drop-shadow(0 0 10px #00ff80);
+}
+
+/*  PARTÍCULAS DE MAGIA */
+.particula {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: particula 1s ease-out forwards;
+}
+@keyframes particula {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(3); opacity: 0; }
+}
+
+
+/*BOTÓN VOLVER ARRIBA */
+#volverArriba {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #004d28;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 22px;
+  z-index: 2000;
+  transition: background 0.3s ease;
+}
+
+#volverArriba:hover {
+  background: #00894d;
+}
+
+/* Algunos arreglos xd/*
+
+/* CORRECCIÓN EL SALUDO NO BLOQUEA LA PÁGINA */
+#saludo {
+  z-index: 9000;
+}
+
+/* CORRECCIÓN HADA */
+#hada-flotante {
+  position: fixed;
+  width: 70px;
+  pointer-events: none;
+  z-index: 5000;
+}
+
+/* BOTÓN VOLVER ARRIBA (arreglado al fin) */
+#volverArriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  display: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+#volverArriba:hover {
+  transform: scale(1.15);
+  background: var(--naranja);
+}
+
+/* ANIMACIÓN TITULOS */
+.titulo h1 {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomTitulo 0.9s ease forwards;
+}
+
+@keyframes zoomTitulo {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*SLIDER GRANDE*/
+
+.slider-container {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider .slide {
+  width: 100%;
+  height: 600px; 
+  display: none;
+}
+
+.slider .slide.active {
+  display: block;
+}
+
+.slider img {
+  width: 100%;
+  height: 600px;  
+  object-fit: cover;
+}
+
+/* Botones */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  border: none;
+  padding: 15px 22px;
+  cursor: pointer;
+  font-size: 2.4rem;
+  border-radius: 8px;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.slider-btn.prev {
+  left: 25px;
+}
+
+.slider-btn.next {
+  right: 25px;
+}
+
+
+#hada-flotante {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 90px !important;
+    height: auto !important;
+    pointer-events: none !important;
+    z-index: 999999 !important;
+    transition: transform 0.1s linear !important;
+}
+

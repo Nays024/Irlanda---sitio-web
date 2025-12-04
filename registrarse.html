@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse - Irlanda</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+
+<body>
+  
+  <script src="dinamico.js"></script>
+  <!-- BOTÓN VOLVER ARRIBA -->
+  <button id="volverArriba" aria-label="Volver arriba">↑</button>
+
+  <header>
+    <div class="buscador">
+      <input type="text" placeholder="Buscar...">
+      <button>🔍</button>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+
+        <li class="idioma">
+          <a href="#">Idioma ▾</a>
+          <ul class="submenu">
+            <li><a href="registrarse.html">Español</a></li>
+            <li><a href="registrarse.html">English</a></li>
+          </ul>
+        </li>
+
+        <li><a href="registrarse.html" class="active">Registrarse</a></li>
+
+        <li class="categorias">
+          <a href="#">Categorías ▾</a>
+          <ul class="submenu">
+            <li><a href="Musica y danza.html">Música y Danza</a></li>
+            <li><a href="mitologia.html">Mitología</a></li>
+            <li><a href="simbolos.html">Símbolos</a></li>
+            <li><a href="paisajes.html">Paisajes</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="logo">
+      <img src="Imagenes/Logo.png" alt="Logo Irlanda">
+    </div>
+  </header>
+
+  <main class="formulario-contenedor">
+    <div class="formulario-header">
+      <img src="Imagenes/Registrarse/seLTA decora.jpg" class="icono">
+      <h1>Registrarse</h1>
+      <img src="Imagenes/Registrarse/seLTA decora.jpg" class="icono">
+    </div>
+
+    <hr class="decoracion">
+
+    <form class="formulario">
+      <label>Nombre</label>
+      <input type="text" placeholder="Juanita" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="correo@example.com" required>
+
+      <label>Contraseña</label>
+      <input type="password" placeholder="******" required>
+
+      <button type="submit">Inscribirse</button>
+    </form>
+
+    <div class="redes">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <p class="login">¿Ya registrado? <a href="login.html">Ingresar</a></p>
+  </main>
+  <script src="dinamico.js"></script>
+</body>
+</html>

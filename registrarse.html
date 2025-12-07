@@ -3,47 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrarse - Irlanda</title>
+  <title data-section="register_page" data-value="page_title">Registrarse - Irlanda</title>
+  <!-- FONT AWESOME (para que se vean los iconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/registro.css">
 </head>
 
 <body>
-  
+
   <script src="dinamico.js"></script>
-  <!-- BOTÓN VOLVER ARRIBA -->
+
   <button id="volverArriba" aria-label="Volver arriba">↑</button>
 
   <header>
+
     <div class="buscador">
-      <input type="text" placeholder="Buscar...">
-      <button>🔍</button>
+      <input type="text" 
+             data-section="menu_page" 
+             data-value="search_placeholder"
+             placeholder="Buscar...">
+      <button aria-label="Buscar">🔍</button>
     </div>
 
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="index.html"
+             data-section="menu_page"
+             data-value="home_link">Inicio</a>
+        </li>
 
         <li class="idioma">
-          <a href="#">Idioma ▾</a>
+          <a href="#"
+             data-section="menu_page"
+             data-value="language_label">Idioma ▾</a>
           <ul class="submenu">
-            <li><a href="registrarse.html">Español</a></li>
-            <li><a href="registrarse.html">English</a></li>
+            <li><a href="#" data-language="es" data-section="menu_page" data-value="spanish_option">Español</a></li>
+            <li><a href="#" data-language="en" data-section="menu_page" data-value="english_option">English</a></li>
           </ul>
         </li>
 
-        <li><a href="registrarse.html" class="active">Registrarse</a></li>
+        <li>
+          <a href="registrarse.html"
+             class="active"
+             data-section="menu_page"
+             data-value="register_link">Registrarse</a>
+        </li>
 
         <li class="categorias">
-          <a href="#">Categorías ▾</a>
+          <a href="#"
+             data-section="menu_page"
+             data-value="categories_link">Categorías ▾</a>
+
           <ul class="submenu">
-            <li><a href="Musica y danza.html">Música y Danza</a></li>
-            <li><a href="mitologia.html">Mitología</a></li>
-            <li><a href="simbolos.html">Símbolos</a></li>
-            <li><a href="paisajes.html">Paisajes</a></li>
+            <li><a href="Musica y danza.html" data-section="menu_page" data-value="music_dance_link">Música y Danza</a></li>
+            <li><a href="mitologia.html" data-section="menu_page" data-value="mythology_link">Mitología</a></li>
+            <li><a href="simbolos.html" data-section="menu_page" data-value="symbols_link">Símbolos</a></li>
+            <li><a href="paisajes.html" data-section="menu_page" data-value="landscapes_link">Paisajes</a></li>
           </ul>
         </li>
-
       </ul>
     </nav>
 
@@ -53,35 +74,58 @@
   </header>
 
   <main class="formulario-contenedor">
+
     <div class="formulario-header">
       <img src="Imagenes/Registrarse/seLTA decora.jpg" class="icono">
-      <h1>Registrarse</h1>
+
+      <h1 data-section="register_page" data-value="main_header">Registrarse</h1>
+
       <img src="Imagenes/Registrarse/seLTA decora.jpg" class="icono">
     </div>
 
     <hr class="decoracion">
 
     <form class="formulario">
-      <label>Nombre</label>
-      <input type="text" placeholder="Juanita" required>
 
-      <label>Email</label>
-      <input type="email" placeholder="correo@example.com" required>
+      <label data-section="register_page" data-value="label_name">Nombre</label>
+      <input type="text" 
+             placeholder="Juanita"
+             data-section="register_page"
+             data-value="placeholder_name"
+             required>
 
-      <label>Contraseña</label>
-      <input type="password" placeholder="******" required>
+      <label data-section="register_page" data-value="label_email">Email</label>
+      <input type="email" 
+             placeholder="correo@example.com"
+             data-section="register_page"
+             data-value="placeholder_email"
+             required>
 
-      <button type="submit">Inscribirse</button>
+      <label data-section="register_page" data-value="label_password">Contraseña</label>
+      <input type="password" 
+             placeholder="******"
+             data-section="register_page"
+             data-value="placeholder_password"
+             required>
+
+      <button type="submit"
+              data-section="register_page"
+              data-value="button_submit">Inscribirse</button>
     </form>
 
-    <div class="redes">
+   <div class="redes">
       <a href="#"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <p class="login">¿Ya registrado? <a href="login.html">Ingresar</a></p>
+    <p class="login">
+      <span data-section="register_page" data-value="login_prompt">¿Ya registrado?</span>
+      <a href="login.html" data-section="register_page" data-value="login_link">Ingresar</a>
+    </p>
+
   </main>
+
   <script src="dinamico.js"></script>
 </body>
 </html>

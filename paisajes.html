@@ -4,74 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explora los paisajes más emblemáticos de Irlanda: acantilados, montañas y castillos que muestran la belleza natural del país.">
-  <title>Paisajes - Irlanda</title>
+  <title data-section="landscapes_page" data-value="page_title">Paisajes - Irlanda</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
   <script src="dinamico.js"></script>
-  <!-- BOTÓN VOLVER ARRIBA -->
+
   <button id="volverArriba" aria-label="Volver arriba">↑</button>
 
-  <!-- 🔹 Encabezado -->
   <header>
     <div class="ciudad-buscador">
       <img src="Imagenes/Danza y Música/Ciudad.png" alt="Ícono de Dublín" class="icono-menu" width="70" height="70">
 
       <div class="buscador">
-        <input type="text" placeholder="Buscar..." aria-label="Buscar contenido">
+        <input type="text"
+               data-section="menu_page"
+               data-value="search_placeholder"
+               placeholder="Buscar..."
+               aria-label="Buscar contenido">
         <button aria-label="Buscar">🔍</button>
       </div>
     </div>
 
-    <!-- 🔹 Menú principal -->
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
+        <li>
+          <a href="index.html"
+             data-section="menu_page"
+             data-value="home_link">Inicio</a>
+        </li>
 
         <li class="idioma">
-          <a href="#">Idioma ▾</a>
+          <a href="#"
+             data-section="menu_page"
+             data-value="language_label">Idioma ▾</a>
           <ul class="submenu">
-            <li><a href="paisajes.html">Español</a></li>
-            <li><a href="paisajes.html">English</a></li>
+            <li><a href="#" data-language="es" data-section="menu_page" data-value="spanish_option">Español</a></li>
+            <li><a href="#" data-language="en" data-section="menu_page" data-value="english_option">English</a></li>
           </ul>
         </li>
 
-        <li><a href="registrarse.html">Registrarse</a></li>
+        <li>
+          <a href="registrarse.html"
+             data-section="menu_page"
+             data-value="register_link">Registrarse</a>
+        </li>
 
         <li class="categorias">
-          <a href="#">Categorías ▾</a>
+          <a href="#"
+             data-section="menu_page"
+             data-value="categories_link">Categorías ▾</a>
+
           <ul class="submenu">
-            <li><a href="Musica y danza.html">Música y Danza</a></li>
-            <li><a href="mitologia.html">Mitología</a></li>
-            <li><a href="simbolos.html">Símbolos</a></li>
-            <li><a href="paisajes.html" class="active">Paisajes</a></li>
+            <li><a href="Musica y danza.html" data-section="menu_page" data-value="music_dance_link">Música y Danza</a></li>
+            <li><a href="mitologia.html" data-section="menu_page" data-value="mythology_link">Mitología</a></li>
+            <li><a href="simbolos.html" data-section="menu_page" data-value="symbols_link">Símbolos</a></li>
+            <li><a href="paisajes.html" class="active" data-section="menu_page" data-value="landscapes_link">Paisajes</a></li>
           </ul>
         </li>
       </ul>
     </nav>
 
-    <!-- 🔹 Logo (sin arpa ni video) -->
     <div class="logo">
       <img src="Imagenes/Logo.png" alt="Logo Irlanda en corazón verde" width="120" height="120">
     </div>
   </header>
 
-  <!-- 🔹 Contenido principal -->
   <main>
     <section class="titulo">
-      <h1>PAISAJES DE IRLANDA</h1>
+      <h1 data-section="landscapes_page" data-value="main_header">PAISAJES DE IRLANDA</h1>
     </section>
 
     <section class="paisajes">
+
       <article class="bloque">
         <div class="imagen">
           <img src="Imagenes/Paisajes/alcantilado moher (1).jpg" alt="Acantilados de Moher en la costa de Irlanda" width="400" height="300">
         </div>
         <div class="texto">
-          <h2>Acantilados de Moher</h2>
-          <p>
+          <h2 data-section="landscapes_page" data-value="moher_title">Acantilados de Moher</h2>
+          <p data-section="landscapes_page" data-value="moher_paragraph">
             Los <strong>Cliffs of Moher</strong> son uno de los paisajes más icónicos de Irlanda, 
             elevándose más de 200 metros sobre el Atlántico. Desde su cima se puede apreciar la 
             inmensidad del océano y la riqueza natural del oeste irlandés (Byrne, 2017).
@@ -84,12 +98,11 @@
           <img src="Imagenes/Paisajes/La Calzada del Gigante.jpg" alt="Patrimonio de la Humanidad" width="400" height="300">
         </div>
         <div class="texto">
-          <h2>La Calzada del Gigante</h2>
-          <p>
+          <h2 data-section="landscapes_page" data-value="giants_causeway_title">La Calzada del Gigante</h2>
+          <p data-section="landscapes_page" data-value="giants_causeway_paragraph">
             Este sitio declarado Patrimonio de la Humanidad por la “<em>UNESCO</em>”, destaca por sus 
             columnas de basalto formadas por actividad volcánica hace millones de años, 
             envueltas en leyendas celtas (O’Connor, 2015). 
-            
           </p>
         </div>
       </article>
@@ -99,11 +112,10 @@
           <img src="Imagenes/Paisajes/Parque Nacional de Killarney.jpg" alt="Este parque combina lagos, montañas y castillos históricos" width="400" height="300">
         </div>
         <div class="texto">
-          <h2>Parque Nacional de Killarney</h2>
-          <p>
+          <h2 data-section="landscapes_page" data-value="killarney_title">Parque Nacional de Killarney</h2>
+          <p data-section="landscapes_page" data-value="killarney_paragraph">
             Este parque combina lagos, montañas y castillos históricos como <strong>Ross Castle</strong> convirtiéndose 
             en un punto esencial para los amantes de la naturaleza (Murphy, 2018).
-            
           </p>
         </div>
       </article>
@@ -113,29 +125,27 @@
           <img src="Imagenes/Paisajes/Connemara.jpg" alt="Paisaje montañoso de Connemara con lagos y cielo nublado" width="400" height="300">
         </div>
         <div class="texto">
-          <h2>Connemara</h2>
-          <p>
+          <h2 data-section="landscapes_page" data-value="connemara_title">Connemara</h2>
+          <p data-section="landscapes_page" data-value="connemara_paragraph">
             Connemara es famoso por sus paisajes montañosos, lagos y tradiciones <em>gaélicas</em> que se 
             conservan vivas en sus pueblos (Kelly, 2016).
-            
           </p>
         </div>
       </article>
+
     </section>
   </main>
 
-  <!-- 🔹 Pie de página -->
   <footer class="referencias">
-    <h2>Referencias</h2>
+    <h2 data-section="footer" data-value="references_header">Referencias</h2>
     <ul>
-      <li>Byrne, P. (2017).<em>Natural Wonders of Ireland. Dublin Press</em>.</li>
-      <li>Kelly, R. (2016).<em>Connemara: Land and People. Galway University Press</em>.</li>
-      <li>Murphy,A.(2018).<em>Killarney National Park: History and Nature. Cork Publishing</em>.</li>
-      <li>O’Connor, J.(2015). <em>The Giant’s Causeway: Myth and Geology. Belfast Academic Press</em>.</li>
+      <li>Byrne, P. (2017). <em>Natural Wonders of Ireland. Dublin Press</em>.</li>
+      <li>Kelly, R. (2016). <em>Connemara: Land and People. Galway University Press</em>.</li>
+      <li>Murphy, A. (2018). <em>Killarney National Park: History and Nature. Cork Publishing</em>.</li>
+      <li>O’Connor, J. (2015). <em>The Giant’s Causeway: Myth and Geology. Belfast Academic Press</em>.</li>
     </ul>
   </footer>
+
   <script src="dinamico.js"></script>
 </body>
 </html>
-
-

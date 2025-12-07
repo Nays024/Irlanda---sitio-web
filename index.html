@@ -3,101 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubre Irlanda: cultura celta, paisajes mágicos, música y tradiciones únicas. Un sitio web educativo sobre Irlanda.">
-  <meta name="author" content="Yemmie Nayarit Duarte Sánchez">
-  <meta name="robots" content="index, follow">
-  <title>Irlanda: tradición celta y experiencias únicas de un mundo mágico</title>
+
+  <meta name="description" data-section="meta" data-value="description"
+    content="Descubre Irlanda: cultura celta, paisajes mágicos, música y tradiciones únicas.">
+
+  <title data-section="meta" data-value="page_title">
+    Irlanda: tradición celta y experiencias únicas de un mundo mágico
+  </title>
+
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-   <script src="dinamico.js"></script>
+
   <!-- BOTÓN VOLVER ARRIBA -->
   <button id="volverArriba" aria-label="Volver arriba">↑</button>
-  
-  <!-- Encabezado principal -->
+
   <header>
     <div class="buscador">
-      <input type="text" placeholder="Buscar..." aria-label="Buscar contenido en el sitio">
+      <input 
+        type="text"
+        placeholder="Buscar..."
+        aria-label="Buscar contenido en el sitio"
+        data-section="menu_page"
+        data-value="search_placeholder"
+      >
       <button aria-label="Buscar">🔍</button>
     </div>
 
     <nav role="navigation">
       <ul>
-        <li><a href="index.html" class="active"><span class="es">Inicio</span><span class="en">Home</span></a></li>
 
+        <!-- Inicio -->
+        <li>
+          <a href="index.html"
+             class="active"
+             data-section="menu_page"
+             data-value="home_link">
+             Inicio
+          </a>
+        </li>
+
+        <!-- Idioma -->
         <li class="idioma">
-          <a href="#" aria-haspopup="true">Idioma ▾</a>
+          <a href="#" aria-haspopup="true"
+             data-section="menu_page"
+             data-value="language_label">
+             Idioma ▾
+          </a>
+
           <ul class="submenu">
-            <li><a href="#es">Español</a></li>
-            <li><a href="#en">English</a></li>
+            <li>
+              <a href="#" data-language="es" data-section="menu_page" data-value="spanish_option">
+                Español
+              </a>
+            </li>
+            <li>
+              <a href="#" data-language="en" data-section="menu_page" data-value="english_option">
+                Inglés
+              </a>
+            </li>
           </ul>
         </li>
 
-        <li><a href="Registrarse.html">Registrarse</a></li>
+        <!-- Registrarse -->
+        <li>
+          <a href="registrarse.html"
+             data-section="menu_page"
+             data-value="register_link">
+             Registrarse
+          </a>
+        </li>
 
+        <!-- Categorías -->
         <li class="categorias">
-          <a href="#"><span class="es">Categorías ▾</span><span class="en">Categories ▾</span></a>
+          <a href="#"><span data-section="menu_page" data-value="categories_link">Categorías ▾</span></a>
           <ul class="submenu">
-            <li><a href="Musica y danza.html">Música y Danza</a></li>
-            <li><a href="mitologia.html">Mitología</a></li>
-            <li><a href="simbolos.html">Símbolos</a></li>
-            <li><a href="Paisajes.html">Paisajes</a></li>
+            <li><a href="musica y danza.html" data-section="menu_page" data-value="music_dance_link">Música y Danza</a></li>
+            <li><a href="mitologia.html" data-section="menu_page" data-value="mythology_link">Mitología</a></li>
+            <li><a href="simbolos.html" data-section="menu_page" data-value="symbols_link">Símbolos</a></li>
+            <li><a href="paisajes.html" data-section="menu_page" data-value="landscapes_link">Paisajes</a></li>
           </ul>
         </li>
+
       </ul>
     </nav>
 
     <div class="logo">
-      <img src="Imagenes/Logo.png" alt="Logo Irlanda en forma de corazón verde" width="120" height="120">
+      <img src="Imagenes/Logo.png" alt="Logo Irlanda" width="120" height="120">
     </div>
   </header>
 
   <main>
     <section class="titulo">
-      <h1>IRLANDA: TRADICIÓN CELTA Y EXPERIENCIAS ÚNICAS DE UN MUNDO MÁGICO</h1>
+      <h1 data-section="home_page" data-value="main_header">
+        IRLANDA: TRADICIÓN CELTA Y EXPERIENCIAS ÚNICAS DE UN MUNDO MÁGICO
+      </h1>
     </section>
 
-    <!-- SLIDER PRINCIPAL-->
+    <!-- SLIDER -->
     <section class="slider-container">
-
       <div class="slider">
-        <div class="slide active">
-          <img src="Imagenes/Banner.jpg" alt="Imagen Irlanda 1">
-        </div>
-
-        <div class="slide">
-          <img src="Imagenes/Banner 2 Irlanda.png" alt="Imagen Irlanda 2">
-        </div>
-
-        <div class="slide">
-          <img src="Imagenes/Banner 3 irlanda.png" alt="Imagen Irlanda 3">
-        </div>
+        <div class="slide active"><img src="Imagenes/Banner.jpg" alt="Imagen Irlanda 1"></div>
+        <div class="slide"><img src="Imagenes/Banner 2 Irlanda.png" alt="Imagen Irlanda 2"></div>
+        <div class="slide"><img src="Imagenes/Banner 3 irlanda.png" alt="Imagen Irlanda 3"></div>
       </div>
 
       <button class="slider-btn prev">❮</button>
       <button class="slider-btn next">❯</button>
-
       <div class="paginacion"></div>
     </section>
-
   </main>
 
   <footer>
-    <p>© 2025 - Yemmie Nayarit Duarte Sánchez - Sitio educativo</p>
+    <p data-section="footer" data-value="text">
+      © 2025 - Yemmie Nayarit Duarte Sánchez - Sitio educativo
+    </p>
   </footer>
 
-  <!-- SCRIPT DINÁMICO -->
   <script src="dinamico.js"></script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-

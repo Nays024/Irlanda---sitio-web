@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "description": "Discover Ireland: Celtic culture, magical landscapes, music and unique traditions. An educational website about Ireland.",
+    "page_title": "Ireland: Celtic tradition and unique experiences of a magical world"
+  },
+  "menu_page": {
+    "search_placeholder": "Search...",
+    "home_link": "Home",
+    "register_link": "Register",
+    "categories_link": "Categories ▾",
+    "music_dance_link": "Music & Dance",
+    "mythology_link": "Mythology",
+    "symbols_link": "Symbols",
+    "landscapes_link": "Landscapes",
+    "language_label": "Language ▾",
+    "spanish_option": "Spanish",
+    "english_option": "English"
+  },
+
+  "home_page": {
+    "main_header": "IRELAND: CELTIC TRADITION AND UNIQUE EXPERIENCES OF A MAGICAL WORLD"
+  },
+  "music_page": {
+    "meta_description": "Explore traditional Irish music and dance: instruments, festivals, Celtic culture and unique sounds.",
+    "page_title": "Music & Dance - Ireland",
+    "main_header": "MUSIC & DANCE",
+    "music_title": "Music",
+    "music_paragraph": "Instruments such as the <strong>fiddle</strong>, the <strong>tin whistle</strong>, the <strong>uilleann pipes</strong> and the <strong>Celtic harp</strong> are the foundation of Irish music, passing tradition from generation to generation (Smith, 2019; Williams, 2013).",
+    "dance_title": "Dance",
+    "dance_paragraph": "Irish dance is characterized by rapid foot movements while the torso remains rigid. There are group <em>céilí dances</em> and <em>solo dances</em>, with costumes full of Celtic embroidery (Hall, 2008).",
+    "live_music_title": "Live Music",
+    "live_music_paragraph": "Pubs are cultural spaces where <em>sessions</em> take place, improvised musical gatherings that strengthen collective identity (O’Shea, 2020).",
+    "festivals_title": "Festivals",
+    "festivals_paragraph": "The <em>Fleadh Cheoil</em> is Ireland's most important festival, bringing together musicians and dancers in a great celebration of Celtic heritage (Vallely, 2011).",
+    "video_header": "Irish Dance Demonstration"
+  },
+  "landscapes_page": {
+    "meta_description": "Explore Ireland's most emblematic landscapes: cliffs, mountains and castles that show the country's natural beauty.",
+    "page_title": "Landscapes - Ireland",
+    "main_header": "IRISH LANDSCAPES",
+    "moher_title": "Cliffs of Moher",
+    "moher_paragraph": "The <strong>Cliffs of Moher</strong> are one of Ireland's most iconic landscapes, rising more than 200 meters above the Atlantic. From their summit you can appreciate the immensity of the ocean and the natural richness of the west of Ireland (Byrne, 2017).",
+    "giants_causeway_title": "The Giant's Causeway",
+    "giants_causeway_paragraph": "This UNESCO World Heritage site stands out for its basalt columns formed by volcanic activity millions of years ago, wrapped in Celtic legends (O’Connor, 2015).",
+    "killarney_title": "Killarney National Park",
+    "killarney_paragraph": "This park combines lakes, mountains and historic castles such as <strong>Ross Castle</strong>, becoming an essential spot for nature lovers (Murphy, 2018).",
+    "connemara_title": "Connemara",
+    "connemara_paragraph": "Connemara is famous for its mountainous landscapes, lakes and Gaelic traditions that remain alive in its villages (Kelly, 2016)."
+  },
+  "register_page": {
+    "page_title": "Register - Ireland",
+    "main_header": "Register",
+    "label_name": "Name",
+    "placeholder_name": "Juanita",
+    "label_email": "Email",
+    "placeholder_email": "email@example.com",
+    "label_password": "Password",
+    "placeholder_password": "******",
+    "button_submit": "Register",
+    "login_prompt": "Already registered? ",
+    "login_link": "Log in"
+  },
+  "footer": {
+    "text": "© 2025 - Yemmie Nayarit Duarte Sánchez - Educational site",
+    "references_header": "References"
+  }
+}

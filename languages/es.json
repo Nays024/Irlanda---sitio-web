@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "description": "Descubre Irlanda: cultura celta, paisajes mágicos, música y tradiciones únicas. Un sitio web educativo sobre Irlanda.",
+    "page_title": "Irlanda: tradición celta y experiencias únicas de un mundo mágico"
+    
+  },
+   "menu_page": {
+    "search_placeholder": "Buscar...",
+    "home_link": "Inicio",
+    "register_link": "Registrarse",
+    "categories_link": "Categorias ▾",
+    "music_dance_link": "Música y Danza",
+    "mythology_link": "Mitología",
+    "symbols_link": "Símbolos",
+    "landscapes_link": "Paisajes",
+    "language_label": "Idioma ▾",
+    "spanish_option": "Español",
+    "english_option": "Ingles"
+    
+  },
+  "home_page": {
+    "header": "IRLANDA: TRADICIÓN CELTA Y EXPERIENCIAS ÚNICAS DE UN MUNDO MÁGICO"
+    
+  },
+  "footer": {
+    "text": "© 2025 - Yemmie Nayarit Duarte Sánchez - Sitio educativo",
+    "references_header": "Referencias"
+  },
+  "music_page": {
+    "meta_description": "Explora la música y danza tradicional de Irlanda: instrumentos, festivales, cultura celta y sonidos únicos.",
+    "page_title": "Música y Danza - Irlanda",
+    "main_header": "MÚSICA Y DANZA",
+    "music_title": "Música",
+    "music_paragraph": "Instrumentos como el <strong>fiddle</strong>, el <strong>tin whistle</strong>, las <strong>uilleann pipes</strong> y el <strong>arpa celta</strong> son la base de la música irlandesa, transmitiendo tradición de generación en generación (Smith, 2019; Williams, 2013).",
+    "dance_title": "Danza",
+    "dance_paragraph": "La danza irlandesa se caracteriza por sus rápidos movimientos de pies mientras el torso permanece rígido. Existen <em>céilí dances</em> en grupo y <em>solo dances</em>, con vestuarios llenos de bordados celtas (Hall, 2008).",
+    "live_music_title": "Música en vivo",
+    "live_music_paragraph": "Los pubs son espacios culturales donde se celebran <em>sessions</em>, encuentros musicales improvisados que fortalecen la identidad colectiva (O’Shea, 2020).",
+    "festivals_title": "Festivales",
+    "festivals_paragraph": "El <em>Fleadh Cheoil</em> es el festival más importante de Irlanda, reuniendo a músicos y bailarines en una gran celebración de la herencia celta (Vallely, 2011).",
+    "video_header": "Demostración de Irish Dance"
+  },
+  "landscapes_page": {
+    "meta_description": "Explora los paisajes más emblemáticos de Irlanda: acantilados, montañas y castillos que muestran la belleza natural del país.",
+    "page_title": "Paisajes - Irlanda",
+    "main_header": "PAISAJES DE IRLANDA",
+    "moher_title": "Acantilados de Moher",
+    "moher_paragraph": "Los <strong>Cliffs of Moher</strong> son uno de los paisajes más icónicos de Irlanda, elevándose más de 200 metros sobre el Atlántico. Desde su cima se puede apreciar la inmensidad del océano y la riqueza natural del oeste irlandés (Byrne, 2017).",
+    "giants_causeway_title": "La Calzada del Gigante",
+    "giants_causeway_paragraph": "Este sitio declarado Patrimonio de la Humanidad por la “<em>UNESCO</em>”, destaca por sus columnas de basalto formadas por actividad volcánica hace millones de años, envueltas en leyendas celtas (O’Connor, 2015).",
+    "killarney_title": "Parque Nacional de Killarney",
+    "killarney_paragraph": "Este parque combina lagos, montañas y castillos históricos como <strong>Ross Castle</strong> convirtiéndose en un punto esencial para los amantes de la naturaleza (Murphy, 2018).",
+    "connemara_title": "Connemara",
+    "connemara_paragraph": "Connemara es famoso por sus paisajes montañosos, lagos y tradiciones <em>gaélicas</em> que se conservan vivas en sus pueblos (Kelly, 2016)."
+  },
+  "register_page": {
+    "page_title": "Registrarse - Irlanda",
+    "main_header": "Registrarse",
+    "label_name": "Nombre",
+    "placeholder_name": "Juanita",
+    "label_email": "Email",
+    "placeholder_email": "correo@example.com",
+    "label_password": "Contraseña",
+    "placeholder_password": "******",
+    "button_submit": "Inscribirse",
+    "login_prompt": "¿Ya registrado? ",
+    "login_link": "Ingresar"
+  }
+}

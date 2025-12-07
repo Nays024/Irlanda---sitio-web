@@ -1,3 +1,32 @@
+/* Traductor funcional */
+const langButtons = document.querySelectorAll("[data-language]");
+const textsToChange = document.querySelectorAll("[data-section]");
+
+langButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const lang = button.dataset.language;
+
+    fetch(`languages/${lang}.json`)
+      .then(res => {
+        if (!res.ok) throw new Error("Idioma no encontrado: " + res.status);
+        return res.json();
+      })
+      .then(data => {
+        textsToChange.forEach((el) => {
+          const section = el.dataset.section;
+          const value = el.dataset.value;
+
+          if (data[section] && data[section][value] !== undefined) {
+            el.innerHTML = data[section][value];
+          }
+        });
+      })
+      .catch(err => console.error("Error cargando JSON:", err));
+  });
+});
+
 /* SALUDO PERSONALIZADO (10 segundos) */
 window.addEventListener("DOMContentLoaded", () => {
   const saludo = document.createElement("div");
@@ -274,3 +303,49 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+// ===============================
+//      CAMBIO DE IDIOMA
+// ===============================
+
+// Cargar idioma guardado al iniciar
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "es";
+  setLanguage(savedLang);
+});
+
+// Detectar clic en "Español" / "English"
+document.querySelectorAll("[data-language]").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const lang = btn.getAttribute("data-language");
+    localStorage.setItem("lang", lang);
+    setLanguage(lang);
+  });
+});
+
+async function setLanguage(lang) {
+  try {
+    const response = await fetch(`languages/${lang}.json`);
+    const translations = await response.json();
+
+    // Selecciona todos los elementos traducibles
+    const elements = document.querySelectorAll("[data-section]");
+
+    elements.forEach(el => {
+      const section = el.getAttribute("data-section");
+      const value = el.getAttribute("data-value");
+
+      // Si existe traducción → reemplazar texto
+      if (translations[section] && translations[section][value]) {
+        el.innerHTML = translations[section][value];
+      }
+    });
+
+    console.log("Idioma cargado:", lang);
+
+  } catch (error) {
+    console.error("Error cargando idioma:", error);
+  }
+}
+
